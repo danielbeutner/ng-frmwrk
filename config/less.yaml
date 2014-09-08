@@ -1,0 +1,9 @@
+build:
+  options:
+    dumpLineNumbers: true
+    stripBanners: true
+    syncImport: true
+    strictImports: true
+    paths: ["src/less"]
+  src: "src/less/app.less"
+  dest: "build/css/app.css"

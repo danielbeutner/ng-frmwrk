@@ -1,0 +1,11 @@
+install:
+  options:
+    targetDir: 'src/libs'
+    layout: 'byType'
+    install: true
+    verbose: true
+    cleanTargetDir: true
+    cleanBowerDir: true
+    bowerOptions:
+      forceLatest: true
+      production: false

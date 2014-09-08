@@ -1,0 +1,54 @@
+{
+  "name": "ng-frmwrk",
+  "version": "0.0.1",
+  "description": "none yet!",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:danielditgens/ng-frmwrk.git"
+  },
+  "keywords": [
+    "framework",
+    "angularjs",
+    "angular",
+    "grunt",
+    "node",
+    "nodejs",
+    "boilerplate",
+    "browserify",
+    "frmwrk"
+  ],
+  "author": "Daniel Ditgens",
+  "license": "MIT",
+  "devDependencies": {
+    "assemble": "^0.4.41",
+    "assemble-less": "^0.7.0",
+    "grunt": "^0.4.5",
+    "grunt-bower-task": "^0.3.4",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-concat": "^0.4.0",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-uglify": "^0.4.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-csso": "^0.6.3",
+    "grunt-express-server": "^0.4.19",
+    "grunt-html2js": "^0.2.8",
+    "grunt-newer": "^0.7.0",
+    "grunt-notify": "^0.2.20",
+    "grunt-open": "^0.2.3",
+    "jit-grunt": "^0.4.2",
+    "load-grunt-config": "^0.8.0",
+    "lodash": "^2.4.1",
+    "time-grunt": "^0.3.2"
+  },
+  "dependencies": {
+    "express": "^4.8.7"
+  },
+  "browser": {
+    "angular": "./build/libs/angular/angular.js",
+    "angular-ui-router": "./build/libs/angular/angular-ui-router.js"
+  }
+}

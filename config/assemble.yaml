@@ -1,0 +1,7 @@
+build:
+  options:
+    layout: 'src/tpl/layouts/default.html'
+    partials: 'src/tpl/partials/**/*.html'
+    flatten: true
+  files:
+    '<%= cfg.buildDir %>/': ["src/html/index.html" ]

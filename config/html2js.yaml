@@ -1,0 +1,8 @@
+options:
+  base: 'templates'
+app:
+  src: 'src/<%= cfg.templates.app %>'
+  dest: '<%= cfg.buildDir %>/templates/app.js'
+common:
+  src: 'src/<%= cfg.templates.common %>'
+  dest: '<%= cfg.buildDir %>/templates/common.js'

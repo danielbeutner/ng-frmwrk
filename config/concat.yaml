@@ -1,0 +1,3 @@
+build:
+  src: ['src/libs/jquery/jquery.js']
+  dest: 'build/js/frmwrk.js'

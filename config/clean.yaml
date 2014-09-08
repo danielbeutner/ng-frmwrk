@@ -1,0 +1,4 @@
+build:
+  src: ['build/']
+dist:
+  src: ['dist/']

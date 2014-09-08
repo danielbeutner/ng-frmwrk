@@ -1,0 +1,10 @@
+buildDir: 'build'
+scripts:
+  - 'libs/**/*.js'
+  - 'app/**/*.js'
+  - '!app/**/*.spec.js'
+  - 'common/**/*.js'
+  - '!common/**/*.spec.js'
+templates:
+  app: 'app/**/*.tpl.html'
+  common: 'common/**/*.tpl.html'

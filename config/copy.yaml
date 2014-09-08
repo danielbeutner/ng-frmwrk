@@ -1,0 +1,14 @@
+buildAssets:
+  expand: true
+  cwd: 'src/'
+  src: 'assets/**'
+  dest: 'build/assets/'
+  flatten: true
+  filter: 'isFile'
+buildJs:
+  expand: true
+  cwd: 'src/'
+  src: '<%= cfg.scripts %>'
+  dest: '<%= cfg.buildDir %>'
+  flatten: false
+  filter: 'isFile'
