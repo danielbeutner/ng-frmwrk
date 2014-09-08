@@ -1,14 +1,14 @@
-buildAssets:
+assets:
   expand: true
   cwd: 'src/'
   src: 'assets/**'
   dest: 'build/assets/'
   flatten: true
   filter: 'isFile'
-buildJs:
+partials:
   expand: true
-  cwd: 'src/'
-  src: '<%= cfg.scripts %>'
-  dest: '<%= cfg.buildDir %>'
+  cwd: 'src/tpl'
+  src: 'partials/**'
+  dest: 'build/'
   flatten: false
   filter: 'isFile'

@@ -5,10 +5,11 @@ module.exports = function(grunt) {
         grunt.task.run(
             'clean:build',
             'bower:install',
-            'copy:buildAssets',
-            'copy:buildJs',
+            'copy:assets',
+            'copy:partials',
             'assemble:build',
-            'less:build'
+            'less:build',
+            'browserify:build'
         );
     });
 };

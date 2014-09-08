@@ -5,7 +5,8 @@
   "main": "Gruntfile.js",
   "scripts": {
     "test": "grunt test",
-    "install": "bower install"
+    "install": "bower install",
+    "start": "grunt"
   },
   "repository": {
     "type": "git",
@@ -34,14 +35,9 @@
     "grunt-bower-task": "^0.4.0",
     "grunt-browserify": "^3.0.1",
     "grunt-contrib-clean": "^0.6.0",
-    "grunt-contrib-concat": "^0.5.0",
     "grunt-contrib-copy": "^0.5.0",
-    "grunt-contrib-uglify": "^0.5.1",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-csso": "^0.6.3",
     "grunt-express-server": "^0.4.19",
-    "grunt-html2js": "^0.2.8",
-    "grunt-newer": "^0.7.0",
     "grunt-notify": "^0.3.1",
     "grunt-open": "^0.2.3",
     "jit-grunt": "^0.8.0",
@@ -52,7 +48,7 @@
     "express": "^4.8.7"
   },
   "browser": {
-    "angular": "./build/libs/angular/angular.js",
-    "angular-ui-router": "./build/libs/angular/angular-ui-router.js"
+    "angular": "./build/lib/angular/angular.js",
+    "angular-route": "./build/lib/angular-route/angular-route.js"
   }
 }

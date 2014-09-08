@@ -1,6 +1,0 @@
-build:
-  src: 'build/js/frmwrk.js'
-  dest: 'build/js/frmwrk.min.js'
-dist:
-  src: 'dist/js/frmwrk.js'
-  dest: 'dist/js/frmwrk.min.js'

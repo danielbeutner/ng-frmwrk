@@ -1,11 +1,14 @@
-'use strict';
+require('angular');
+require('angular-route');
 
-var angular = require('angular');
+// Relative paths to include services.js and filters.js into your bundle
+require('./services');
+require('./filters');
 
-angular.module('app', [
-      require('./modules/login').name,
-      require('./modules/charts').name,
-      ...
-    ])
-    .config(require('./common/routes'))
-    .constant('version', require('../package.json').version);
+// then include them into your app
+angular.module('myApp', ['ngRoute', 'myApp.filters', 'myApp.services'])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/view1', {templateUrl: 'partials/partial1.html'});
+    $routeProvider.when('/view2', {templateUrl: 'partials/partial2.html'});
+    $routeProvider.otherwise({redirectTo: '/view1'});
+  }]);

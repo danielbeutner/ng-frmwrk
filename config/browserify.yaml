@@ -1,0 +1,3 @@
+build:
+  src: 'src/app/app.js'
+  dest: 'build/app/app.js'

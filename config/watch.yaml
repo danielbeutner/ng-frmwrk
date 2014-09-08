@@ -10,4 +10,6 @@ less:
     livereload: true
 js:
   files: 'src/**/*.js'
-  tasks: 'concat:build'
+  tasks: 'browserify:build'
+  options:
+    livereload: true

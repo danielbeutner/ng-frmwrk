@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
     <title>ng frmwrk</title>
     <meta charset="UTF-8">
     <meta name="description" content="Angular JS framework and boilerplate">
@@ -10,7 +10,10 @@
 
 <body>
     {{body}}
-    <script src="//localhost:35729/livereload.js"></script>
+      <!-- This script will be bundled by the browserify task into dist/js/app.js -->
+  <!-- You should only ever really need this one script tag -->
+  <script src="app/app.js"></script>
+  <script src="//localhost:35729/livereload.js"></script>
 </body>
 
 </html>
