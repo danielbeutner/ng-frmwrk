@@ -1,9 +1,10 @@
 install:
   options:
-    targetDir: 'src/libs'
+    targetDir: './build/lib'
     layout: 'byType'
     install: true
     verbose: true
+    copy: true
     cleanTargetDir: true
     cleanBowerDir: true
     bowerOptions:
