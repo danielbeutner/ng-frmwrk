@@ -1,3 +1,6 @@
+options:
+  background: true
+  debug: false
 dev:
   options:
     script: 'http.js'

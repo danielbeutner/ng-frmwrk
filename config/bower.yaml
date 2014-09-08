@@ -5,8 +5,8 @@ install:
     install: true
     verbose: true
     copy: true
-    cleanTargetDir: true
-    cleanBowerDir: true
+    cleanTargetDir: false
+    cleanBowerDir: false
     bowerOptions:
       forceLatest: true
       production: false

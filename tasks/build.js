@@ -4,6 +4,7 @@ module.exports = function(grunt) {
         grunt.log.writeln('Currently running the "build" task.');
         grunt.task.run(
             'clean:build',
+            'bower:install',
             'copy:buildAssets',
             'copy:buildJs',
             'assemble:build',
