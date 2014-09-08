@@ -1,6 +1,5 @@
 buildDir: 'build'
 scripts:
-  - 'libs/**/*.js'
   - 'app/**/*.js'
   - '!app/**/*.spec.js'
   - 'common/**/*.js'
