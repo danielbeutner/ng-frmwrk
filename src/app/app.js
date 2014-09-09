@@ -6,9 +6,9 @@ require('./services');
 require('./filters');
 
 // then include them into your app
-angular.module('myApp', ['ngRoute', 'myApp.filters', 'myApp.services'])
+angular.module('frmwrk', ['ngRoute', 'frmwrk.filters', 'frmwrk.services'])
   .config(['$routeProvider', function($routeProvider) {
-    $routeProvider.when('/view1', {templateUrl: 'partials/partial1.html'});
-    $routeProvider.when('/view2', {templateUrl: 'partials/partial2.html'});
-    $routeProvider.otherwise({redirectTo: '/view1'});
+    $routeProvider.when('/home', {templateUrl: 'partials/home.html'});
+    $routeProvider.when('/docs', {templateUrl: 'partials/docs.html'});
+    $routeProvider.otherwise({redirectTo: '/home'});
   }]);

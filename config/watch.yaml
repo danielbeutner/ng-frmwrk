@@ -1,5 +1,5 @@
 html:
-  files: 'src/**/*.html'
+  files: ['src/html/*.html', 'src/tpl/layouts/*.html']
   tasks: 'assemble:build'
   options:
     livereload: true
@@ -11,5 +11,10 @@ less:
 js:
   files: 'src/**/*.js'
   tasks: 'browserify:build'
+  options:
+    livereload: true
+partials:
+  files: 'src/tpl/partials/*.html'
+  tasks: ['copy:partials', 'assemble:build']
   options:
     livereload: true

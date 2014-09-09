@@ -1,2 +1,2 @@
-angular.module('myApp.services', []).
+angular.module('frmwrk.services', []).
   value('version', '0.1');
