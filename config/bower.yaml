@@ -1,6 +1,6 @@
 install:
   options:
-    targetDir: './build/lib'
+    targetDir: './lib'
     layout: 'byType'
     install: true
     verbose: true

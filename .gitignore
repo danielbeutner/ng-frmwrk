@@ -2,4 +2,5 @@
 /libs/
 .DS_Store
 /build/
+/lib/
 /bower_components/

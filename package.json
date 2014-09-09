@@ -48,7 +48,7 @@
     "express": "^4.8.7"
   },
   "browser": {
-    "angular": "./build/lib/angular/angular.js",
-    "angular-route": "./build/lib/angular-route/angular-route.js"
+    "angular": "./lib/angular/angular.js",
+    "angular-route": "./lib/angular-route/angular-route.js"
   }
 }
