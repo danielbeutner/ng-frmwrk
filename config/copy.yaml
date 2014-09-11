@@ -1,14 +1,14 @@
 assets:
   expand: true
-  cwd: 'src/'
+  cwd: 'src/static/'
   src: 'assets/**'
-  dest: 'build/assets/'
+  dest: '<%= cfg.buildDir %>/assets/'
   flatten: true
   filter: 'isFile'
-partials:
+templates:
   expand: true
-  cwd: 'src/tpl'
-  src: 'partials/**'
-  dest: 'build/'
+  cwd: 'src/app/'
+  src: '**/*.tpl.html'
+  dest: '<%= cfg.buildDir %>/app/'
   flatten: false
   filter: 'isFile'

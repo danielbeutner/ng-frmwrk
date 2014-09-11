@@ -5,5 +5,5 @@ build:
     syncImport: true
     strictImports: true
     paths: ["src/less"]
-  src: "src/less/app.less"
-  dest: "build/css/app.css"
+  src: "src/static/less/app.less"
+  dest: "<%= cfg.buildDir %>/css/app.css"
