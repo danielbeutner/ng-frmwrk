@@ -1,0 +1,22 @@
+'use strict';
+
+/**
+ * @desc
+ * @ngInject
+ */
+function {{tag}}Directive() {
+  return {
+    restrict: 'E',
+    scope: {
+        product: '@',
+        title: '@',
+        ctrl: '=',
+        searchCtrl: '='
+    },
+    templateUrl: 'elements/{{tag}}/{{tag}}.tpl.html'
+  };
+}
+
+
+angular.module('commonElements.{{tag}}', [])
+  .directive('{{tag}}', {{tag}}Directive);
