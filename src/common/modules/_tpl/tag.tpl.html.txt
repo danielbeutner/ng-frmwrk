@@ -1,0 +1,5 @@
+<div>
+  Inner content:
+  <div ng-transclude></div>
+  - so wow.
+</div>
