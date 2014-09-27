@@ -4,6 +4,5 @@ build:
     stripBanners: true
     syncImport: true
     strictImports: true
-    paths: ["src/less"]
-  src: "src/static/less/app.less"
+  src: ["src/static/less/app.less","src/common/**/*.less","src/app/**/*.less"]
   dest: "<%= cfg.buildDir %>/css/app.css"
