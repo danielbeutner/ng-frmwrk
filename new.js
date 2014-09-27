@@ -6,7 +6,8 @@ var type,
     nameCamel,
     basePath,
     src,
-    newFileName;
+    newFileName
+    usage;
 
 
 String.prototype.toCamel = function(){
@@ -17,9 +18,27 @@ String.prototype.toDash = function(){
   return this.replace(/([A-Z])/g, function($1){return "-"+$1.toLowerCase();});
 };
 
+var usage = function (err) {
+  console.log('USAGE: node new <module|element> <name>');
+  if (err) {
+    console.error('ERROR: ' + err);
+  }
+  process.kill();
+};
+
+if (process.argv.length != 4) {
+    usage();
+}
 process.argv.forEach(function (val, index, array) {
-  if (index == 2) { type = val;}
-  if (index == 3) { name = val;}
+  if (index == 2) {
+    type = val;
+    if (type != 'module' && type != 'element') {
+      usage('Argument <module|element> is missing');
+    }
+  }
+  if (index == 3) {
+    name = val;
+  }
 });
 
 if (name.indexOf('-') >-1){
@@ -31,7 +50,7 @@ if (name.indexOf('-') >-1){
 
 console.log('New ' + type + ' with name '+ nameCamel + ' (<' + name +'>)');
 
-var basePath = path.resolve(process.cwd(), 'src', 'common', type + 's');
+basePath = path.resolve(process.cwd(), 'src', 'common', type + 's');
 
 if (fs.existsSync(path.resolve(basePath, '_tpl'))) {
   console.log('OK: template found');
@@ -49,8 +68,8 @@ if (fs.existsSync(path.resolve(basePath, '_tpl'))) {
       src = fs.readFileSync(path.resolve(basePath, '_tpl', file)).toString();
       src = src.replace(/\{\{tag-tag\}\}/g, name);
       src = src.replace(/\{\{tag\}\}/g, nameCamel);
-      fs.writeFileSync(path.resolve(basePath, 
-                                    nameCamel, 
+      fs.writeFileSync(path.resolve(basePath,
+                                    nameCamel,
                                     newFileName
                                     ), src);
       console.log('OK Writing file ' + newFileName);
