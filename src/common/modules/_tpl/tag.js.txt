@@ -22,5 +22,5 @@ function {{tag}}Directive() {
 }
 
 
-angular.module('commonElements.{{tag}}', [])
+angular.module('commonModules.{{tag}}', [])
   .directive('{{tag}}', {{tag}}Directive);
