@@ -6,16 +6,17 @@ module.exports = function(grunt) {
     require('jit-grunt')(grunt, {
         'notify_hooks': 'grunt-notify',
         'less':'assemble-less',
-        'express': 'grunt-express-server',
-        'bower': 'grunt-bower-task'
+        'express': 'grunt-express-server'
     });
 
     // Vars
-    var path = require('path'),
-        _ = require('lodash'),
+    var _ = require('lodash'),
+        remapify = require('remapify'),
+        path = require('path'),
         taskFiles = grunt.file.expand('config/*.yaml'),    // Load all configuration in config/
         userConfig = grunt.file.readYAML('config.yaml'),   // Load user configuration
         packageInfo = grunt.file.readJSON('package.json'), // Load package info
+
         // Global configuration
         globalConfig = {
             cfg: userConfig,
@@ -29,10 +30,12 @@ module.exports = function(grunt) {
                 ' * Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
                 ' * Licensed <%= pkg.license %>\n' +
                 ' */\n'
-            },
+            }
         };
+
     // Show infos
     grunt.log.writeln(grunt.template.process(globalConfig.meta.banner, {data: globalConfig}));
+
     // Load all configurations for our tasks
     grunt.verbose.subhead('Task Configuration:');
     _.each(taskFiles, function  (file) {
