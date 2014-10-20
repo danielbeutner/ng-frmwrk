@@ -24,10 +24,10 @@ module.exports = function(grunt) {
             meta: {
               banner:
                 '/**\n' +
-                ' * <%= pkg.name %> - v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %>\n' +
+                ' * <%= pkg.name %> - v<%= pkg.version %> - built <%= grunt.template.today("yyyy-mm-dd") %>\n' +
                 ' * <%= pkg.homepage %>\n' +
                 ' *\n' +
-                ' * Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
+                ' * Made with love by <%= pkg.author %>\n' +
                 ' * Licensed <%= pkg.license %>\n' +
                 ' */\n'
             }
