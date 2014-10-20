@@ -6,7 +6,7 @@ module.exports = function(grunt) {
             'clean:build',
             'copy:assets',
             'copy:templates',
-            'assemble:build',
+            'assemble:index',
             'less:build',
             'browserify:build'
         );
