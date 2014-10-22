@@ -1,0 +1,6 @@
+views:
+  src: 'src/app/**/*.jade'
+  dest: 'src/app/views.js'
+common:
+  src: 'src/common/**/*.jade'
+  dest: 'src/app/common.js'

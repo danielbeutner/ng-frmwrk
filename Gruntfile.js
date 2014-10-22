@@ -4,14 +4,12 @@ module.exports = function(grunt) {
     // Init Grunt plugins
     require('time-grunt')(grunt);
     require('jit-grunt')(grunt, {
-        'notify_hooks': 'grunt-notify',
-        'less':'assemble-less',
         'express': 'grunt-express-server'
     });
 
     // Vars
     var _ = require('lodash'),
-        remapify = require('remapify'),
+        // remapify = require('remapify'),
         path = require('path'),
         taskFiles = grunt.file.expand('config/*.yaml'),    // Load all configuration in config/
         userConfig = grunt.file.readYAML('config.yaml'),   // Load user configuration
@@ -24,10 +22,10 @@ module.exports = function(grunt) {
             meta: {
               banner:
                 '/**\n' +
-                ' * <%= pkg.name %> - v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %>\n' +
+                ' * <%= pkg.name %> - v<%= pkg.version %> - built <%= grunt.template.today("yyyy-mm-dd") %>\n' +
                 ' * <%= pkg.homepage %>\n' +
                 ' *\n' +
-                ' * Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
+                ' * Made with love by <%= pkg.author %>\n' +
                 ' * Licensed <%= pkg.license %>\n' +
                 ' */\n'
             }
