@@ -1,0 +1,7 @@
+index:
+  options:
+    data:
+      debug: false
+  files:
+    '<%= cfg.buildDir %>/index.html':
+      - 'src/static/tpl/index.jade'

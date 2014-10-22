@@ -1,0 +1,19 @@
+doctype html
+html(lang="en" ng-app="frmwrk")
+  head
+    title= ng-frmwrk
+    meta(charset="UTF-8")
+    link(rel="stylesheet" href="css/app.css")
+  body
+    nav
+      ul.nav.nav-pills
+        li
+          a(href='#/home') Home
+        li
+          a(href='#/about') About
+    div(ng-view)
+    <!-- This script will be bundled by the browserify task into dist/js/app.js -->
+    <!-- You should only ever really need this one script tag -->
+    script(src="app/app.js")
+    script(src="//localhost:35729/livereload.js")
+

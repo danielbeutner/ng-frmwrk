@@ -5,8 +5,7 @@ module.exports = function(grunt) {
         grunt.task.run(
             'clean:build',
             'copy:assets',
-            'copy:templates',
-            'assemble:index',
+            'jade',
             'less:build',
             'browserify:build'
         );

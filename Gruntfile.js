@@ -4,14 +4,12 @@ module.exports = function(grunt) {
     // Init Grunt plugins
     require('time-grunt')(grunt);
     require('jit-grunt')(grunt, {
-        'notify_hooks': 'grunt-notify',
-        'less':'assemble-less',
         'express': 'grunt-express-server'
     });
 
     // Vars
     var _ = require('lodash'),
-        remapify = require('remapify'),
+        // remapify = require('remapify'),
         path = require('path'),
         taskFiles = grunt.file.expand('config/*.yaml'),    // Load all configuration in config/
         userConfig = grunt.file.readYAML('config.yaml'),   // Load user configuration
