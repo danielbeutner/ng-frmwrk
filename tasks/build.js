@@ -4,10 +4,8 @@ module.exports = function(grunt) {
         grunt.log.writeln('Currently running the "build" task.');
         grunt.task.run(
             'clean:build',
-            'bower:install',
             'copy:assets',
-            'copy:templates',
-            'assemble:build',
+            'jade',
             'less:build',
             'browserify:build'
         );

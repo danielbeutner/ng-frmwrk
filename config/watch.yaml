@@ -1,10 +1,20 @@
 html:
-  files: ['src/static/**/*.html']
+  files: 'src/static/**/*.html'
   tasks: 'assemble:build'
   options:
     livereload: true
+tpl:
+  files:
+    - 'src/app/**/*.tpl.html'
+    - 'src/common/**/*.tpl.html'
+  tasks: 'copy:templates'
+  options:
+    livereload: true
 less:
-  files: 'src/static/**/*.less'
+  files:
+    - 'src/static/**/*.less'
+    - 'src/app/**/*.less'
+    - 'src/common/**/*.less'
   tasks: 'less:build'
   options:
     livereload: true

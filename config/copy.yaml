@@ -5,10 +5,3 @@ assets:
   dest: '<%= cfg.buildDir %>/assets/'
   flatten: true
   filter: 'isFile'
-templates:
-  expand: true
-  cwd: 'src/app/'
-  src: '**/*.tpl.html'
-  dest: '<%= cfg.buildDir %>/app/'
-  flatten: false
-  filter: 'isFile'
