@@ -1,13 +1,16 @@
-html:
-  files: 'src/static/**/*.html'
-  tasks: 'assemble:build'
+index:
+  files: 'src/static/tpl/index.jade'
+  tasks: 'jade:index'
   options:
     livereload: true
-tpl:
-  files:
-    - 'src/app/**/*.tpl.html'
-    - 'src/common/**/*.tpl.html'
-  tasks: 'copy:templates'
+templates:
+  files: 'src/app/**/*.jade'
+  tasks: 'html2js:templates'
+  options:
+    livereload: true
+common:
+  files: 'src/common/**/*.jade'
+  tasks: 'html2js:common'
   options:
     livereload: true
 less:

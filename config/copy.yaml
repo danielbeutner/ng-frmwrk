@@ -1,7 +1,7 @@
 assets:
   expand: true
-  cwd: 'src/static/'
-  src: 'assets/**'
+  cwd: 'src/static/assets'
+  src: '**'
   dest: '<%= cfg.buildDir %>/assets/'
-  flatten: true
+  flatten: false
   filter: 'isFile'
