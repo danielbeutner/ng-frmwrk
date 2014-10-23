@@ -1,4 +1,4 @@
-angular.module('templates-views', ['app/about/about.jade', 'app/home/home.jade']);
+angular.module('frmwrk.templates', ['app/about/about.jade', 'app/home/home.jade']);
 
 angular.module("app/about/about.jade", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("app/about/about.jade",

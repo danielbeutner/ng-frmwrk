@@ -5,10 +5,10 @@ require('angular-route');
 require('./services');
 require('./filters');
 require('./common.js');
-require('./views.js');
+require('./templates.js');
 
 // then include them into your app
-angular.module('frmwrk', ['ngRoute', 'templates-views', 'frmwrk.filters', 'frmwrk.services'])
+angular.module('frmwrk', ['ngRoute', 'frmwrk.templates', 'frmwrk.filters', 'frmwrk.services'])
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/home', {templateUrl: 'app/home/home.jade'});
     $routeProvider.when('/about', {templateUrl: 'app/about/about.jade'});

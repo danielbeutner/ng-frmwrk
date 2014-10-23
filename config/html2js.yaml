@@ -1,6 +1,10 @@
-views:
+templates:
+  options:
+    module: 'frmwrk.templates'
   src: 'src/app/**/*.jade'
-  dest: 'src/app/views.js'
+  dest: 'src/app/templates.js'
 common:
+  options:
+    module: 'frmwrk.common'
   src: 'src/common/**/*.jade'
   dest: 'src/app/common.js'
