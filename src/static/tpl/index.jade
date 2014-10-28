@@ -5,17 +5,7 @@ html(lang="en" ng-app="frmwrk")
     meta(charset="UTF-8")
     link(rel="stylesheet" href="css/app.css")
   body
-    div.container
-      div.row
-        div.span12
-          nav
-            ul
-              li.brand.icon-science ng-frmwrk
-              li
-                a.icon-home(href='#/home') Home
-              li
-                a.icon-anchor(href='#/about') About
-          div(ng-view)
+    div(ng-view)
     <!-- This script will be bundled by the browserify task into dist/js/app.js -->
     <!-- You should only ever really need this one script tag -->
     script(src="app/app.js")
