@@ -7,7 +7,7 @@
 function {{tag}}Directive() {
   return {
     restrict: 'E',
-    controller: function(){},  
+    controller: function(){},
     transclude:true,
     replace:true,
     scope: {
@@ -17,10 +17,10 @@ function {{tag}}Directive() {
         searchCtrl: '='
     },
 
-    templateUrl: 'modules/{{tag}}/{{tag}}.tpl.html'
+    templateUrl: 'common/modules/{{tag}}/{{tag}}.jade'
   };
 }
 
 
-angular.module('commonModules.{{tag}}', [])
+angular.module('frmwrk.module.{{tag}}', [])
   .directive('{{tag}}', {{tag}}Directive);

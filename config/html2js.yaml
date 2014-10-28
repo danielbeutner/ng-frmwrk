@@ -1,10 +1,10 @@
-templates:
+app:
   options:
-    module: 'frmwrk.templates'
+    module: 'frmwrk.app.tpl'
   src: 'src/app/**/*.jade'
-  dest: 'src/app/templates.js'
+  dest: 'src/app/app.tpl.js'
 common:
   options:
-    module: 'frmwrk.common'
+    module: 'frmwrk.common.tpl'
   src: 'src/common/**/*.jade'
-  dest: 'src/app/common.js'
+  dest: 'src/app/common.tpl.js'

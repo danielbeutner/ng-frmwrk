@@ -52,7 +52,7 @@ console.log('New ' + type + ' with name '+ nameCamel + ' (<' + name +'>)');
 
 basePath = path.resolve(process.cwd(), 'src', 'common', type + 's');
 
-if (fs.existsSync(path.resolve(basePath, '_tpl'))) {
+if (fs.existsSync(path.resolve(basePath, '.tpl'))) {
   console.log('OK: template found');
 
   if (fs.existsSync(path.resolve(basePath, nameCamel))){
@@ -62,10 +62,10 @@ if (fs.existsSync(path.resolve(basePath, '_tpl'))) {
     fs.mkdirSync(path.resolve(basePath, nameCamel));
 
     //read all files from tpl, replace variables, write to source
-    fs.readdirSync(path.resolve(basePath, '_tpl')).forEach(function(file){
+    fs.readdirSync(path.resolve(basePath, '.tpl')).forEach(function(file){
       //read file
       newFileName = file.replace('.txt','').replace('tag', nameCamel);
-      src = fs.readFileSync(path.resolve(basePath, '_tpl', file)).toString();
+      src = fs.readFileSync(path.resolve(basePath, '.tpl', file)).toString();
       src = src.replace(/\{\{tag-tag\}\}/g, name);
       src = src.replace(/\{\{tag\}\}/g, nameCamel);
       fs.writeFileSync(path.resolve(basePath,
@@ -81,5 +81,5 @@ if (fs.existsSync(path.resolve(basePath, '_tpl'))) {
 
 
 } else {
-  console.log('ERROR _tpl folder not found: ' + basePath);
+  console.log('ERROR .tpl folder not found: ' + basePath);
 }

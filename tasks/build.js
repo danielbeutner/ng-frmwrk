@@ -5,6 +5,7 @@ module.exports = function(grunt) {
         grunt.task.run(
             'clean:build',
             'copy:assets',
+            'html2js',
             'jade',
             'less:build',
             'browserify:build'

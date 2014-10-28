@@ -1,3 +1,4 @@
+
 'use strict';
 
 /**
@@ -13,10 +14,10 @@ function {{tag}}Directive() {
         ctrl: '=',
         searchCtrl: '='
     },
-    templateUrl: 'elements/{{tag}}/{{tag}}.tpl.html'
+    templateUrl: 'common/elements/{{tag}}/{{tag}}.jade'
   };
 }
 
 
-angular.module('commonElements.{{tag}}', [])
+angular.module('frmwrk.element.{{tag}}', [])
   .directive('{{tag}}', {{tag}}Directive);

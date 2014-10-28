@@ -1,3 +1,0 @@
-<div>
-  My Element
-</div>
