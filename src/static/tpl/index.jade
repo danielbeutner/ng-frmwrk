@@ -5,6 +5,17 @@ html(lang="en" ng-app="frmwrk")
     meta(charset="UTF-8")
     link(rel="stylesheet" href="css/app.css")
   body
+    nav.navbar.navbar-default(role='navigation')
+      div.container-fluid
+        div.navbar-header
+          a.navbar-brand(href='#/') ng-frmwrk
+        div.collapse.navbar-collapse
+          p.navbar-text.navbar-right Angluar JS / CSS / Framework
+          ul.nav.navbar-nav
+            li
+              a(href='#/home') Gettin' started
+            li
+              a(href='#/components') Components
     div(ng-view)
     <!-- This script will be bundled by the browserify task into dist/js/app.js -->
     <!-- You should only ever really need this one script tag -->

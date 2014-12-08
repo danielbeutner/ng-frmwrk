@@ -3,9 +3,9 @@ index:
   tasks: 'jade:index'
   options:
     livereload: true
-templates:
+app:
   files: 'src/app/**/*.jade'
-  tasks: 'html2js:templates'
+  tasks: 'html2js:app'
   options:
     livereload: true
 common:
